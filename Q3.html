@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff7eb3, #ff758c, #ff6a88);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .btn img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 5px solid transparent;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn img:hover {
+            border: 5px dashed #ffeb3b;
+            box-shadow: 0px 5px 20px rgba(255, 235, 59, 0.8);
+            transform: rotate(5deg) scale(1.1);
+        }
+    </style>
+    <script>
+        function wrongAnswer() {
+            alert("The answer is wrong!");
+        }
+        function correctAnswer() {
+            alert("Wrong Answer! Try again.");
+            setTimeout(function() {
+                window.location.href = "Q4.html";
+            }, 2000); // Redirect after 2 seconds
+        }
+    </script>
+</head>
+<body>
+    <h1>Where is moon?</h1>
+    <div class="btn-container">
+        <button class="btn" onclick="wrongAnswer()">
+            <img src="sun.jpg" alt="Wrong Answer">
+        </button>
+        <button class="btn" onclick="correctAnswer()">
+            <img src="moon.jpg" alt="Correct Answer">
+        </button>
+    </div>
+</body>
+</html>

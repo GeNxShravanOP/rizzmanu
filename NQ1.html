@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Question</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #36d1dc, #5b86e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .proceed-btn {
+            background: #ffeb3b;
+            color: #333;
+            font-size: 2rem;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .proceed-btn:hover {
+            background: #ffc107;
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(255, 193, 7, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <button class="proceed-btn" onclick="window.location.href='Q2.html'">Proceed to Question 2</button>
+</body>
+</html>
